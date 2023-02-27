@@ -3,12 +3,6 @@
 Ce dépôt contient des exercices pratiques pour apprendre à utiliser Pytest pour tester des applications en Python.
 Exercices
 
-Voici les exercices disponibles:
-
-    Exercice 1: Test d'une fonction qui calcule la moyenne de deux nombres
-    Exercice 2: Test d'une fonction qui calcule le PGCD de deux nombres
-    Exercice 3: Test d'une fonction qui test des mots de passes par rapport a des critères définis
-
 Comment exécuter les tests
 
 Pour exécuter les tests, vous devez avoir Pytest installé. Vous pouvez l'installer avec la commande suivante:
