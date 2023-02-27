@@ -8,6 +8,7 @@ Comment exécuter les tests
 Pour exécuter les tests, vous devez avoir Pytest installé. Vous pouvez l'installer avec la commande suivante:
 
 pip install pytest
+
 apt-get install python3-pytest -y 
 
 Une fois Pytest installé, vous pouvez exécuter les tests avec la commande suivante:
