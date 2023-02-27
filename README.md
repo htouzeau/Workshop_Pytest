@@ -19,7 +19,7 @@ apt-get install python3-pytest -y
 Une fois Pytest installé, vous pouvez exécuter les tests avec la commande suivante:
 
 pytest-3
-pytest
+pytest 
 
 Cette commande exécutera tous les tests dans les fichiers test_*.py dans le dossier courant.
 
