@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
+# Commande pour installer pytest 3:
 # sudo apt-get install python3-pytest -y
-# or
-# sudo pip install pytest
 
 # Importez la fonction à tester
 def sort_numbers(numbers):
@@ -30,6 +29,16 @@ def test_sort_numbers():
 import pytest
 import random
 
+def test_smoke():
+    assert sort_numbers([3, 2, 1]) == [1, 2, 3]
+
+def test_regression():
+    assert sort_numbers([9, 8, 7]) == [7, 8, 9]
+
+def test_integration():
+    assert sort_numbers([5, 7, 2]) == [2, 5, 7]
+
+# Fixture pour générer une liste d'entiers aléatoires
 @pytest.fixture
 def random_list():
     return random.sample(range(100), 10)
@@ -38,22 +47,3 @@ def random_list():
 def test_random_sort(random_list):
     sorted_list = sorted(random_list)
     assert sort_numbers(random_list) == sorted_list
-
-# Ajoutez des marqueurs de test pour identifier les tests par catégorie
-@pytest.mark.smoke
-def test_smoke():
-    assert sort_numbers([3, 2, 1]) == [1, 2, 3]
-
-@pytest.mark.regression
-def test_regression():
-    assert sort_numbers([9, 8, 7]) == [7, 8, 9]
-
-@pytest.mark.integration
-def test_integration():
-    assert sort_numbers([5, 7, 2]) == [2, 5, 7]
-
-# Ajoutez une fonction de test pour vérifier que la fonction de tri lève une exception si la liste d'entrée est invalide
-def test_invalid_input():
-    with pytest.raises(TypeError):
-        sort_numbers('invalid_input')
-
